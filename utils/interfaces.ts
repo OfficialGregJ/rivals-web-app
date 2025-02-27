@@ -178,3 +178,51 @@ export interface PlayerData {
         };
     }>;
 }
+
+export interface PfpData {
+    id: string,
+    name: string,
+    quality: string,
+    type: string,
+    applicable_hero: string,
+    icon: string,
+    slug: string,
+    description?: string,
+}
+
+export interface Match {
+    match_timestamp: number;
+    match_duration: {
+        minutes: number;
+        seconds: number;
+        raw: number;
+    };
+    season: string;
+    match_uid: string;
+    match_map: {
+        id: number;
+        name: string;
+        gamemode: string;
+    };
+    score: {
+        ally: number;
+        enemy: number;
+    };
+    winner_side: number;
+    mvp_uid: number;
+    svp_uid: number;
+    gamemode: {
+        id: number;
+        name: string;
+    };
+    stats: {
+        kills: number;
+        deaths: number;
+        assists: number;
+        is_win: boolean;
+        has_escaped: boolean;
+        hero: {
+            id: number;
+        };
+    };
+}
