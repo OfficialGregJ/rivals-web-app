@@ -44,3 +44,8 @@ export async function signup(formData: FormData) {
   revalidatePath('/', 'layout')
   redirect('/')
 }
+
+/*
+https://supabase.com/docs/guides/auth/server-side/nextjs?queryGroups=router&router=app
+Look here for recommendations on proper code hygeine when dealing with db
+*/
